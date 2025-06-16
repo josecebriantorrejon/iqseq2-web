@@ -483,14 +483,8 @@ footer a:hover {
     font-size: 30px;
     color: #4D6BBA;
     transition: color 0.3s ease;
-    position: static;
-    top: auto;
-    left: auto;
-    transform: none;
-    display: block;
-    line-height: 1;
-    text-align: center;
-    vertical-align: middle;
+    margin: 0;
+    padding: 0;
     width: auto;
     height: auto;
 }
