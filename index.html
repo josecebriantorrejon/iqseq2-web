@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociación IQSEC2</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/" type="image/x-icon">
+      <!-- Cargar el archivo CSS de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Cargar el archivo JavaScript de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Cargar el plugin de Leaflet para Mapbox -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
+    <link href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" rel="stylesheet" />
+    <!-- Leaflet Provider Tiles -->
+    <script src="https://unpkg.com/leaflet-providers@1.13.0/leaflet-providers.js"></script>
+</head>
+<body>sigu
+    <!-- Encabezado -->
+    <header>
+    <div class="logo">
+        <img src="images/LOGOTIPO-AEIQSEC2-BLANCO.svg" alt="Logo Asociación IQSEC2">
+        <h1>Asociación IQSEC2</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#sobre-iqsec2">La Enfermedad</a></li>
+            <li><a href="#carousel">Historias</a></li>
+            <li><a href="#mapa">Mapa</a></li>
+            <li><a href="#contacto">Contacto y Donaciones</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="images/LOGOTIPO-AEIQSEC2-BLANCO.svg" alt="Logo Asociación IQSEC2" class="hero-logo">
+            <h2>Juntos por una causa</h2>
+            <p>Apoyamos a pacientes y familias afectadas por IQSEC2. Únete a nosotros para marcar la diferencia.</p>
+            <a href="#contacto" class="btn">Colabora</a>
+        </div>
+    </section>
+
+    <!-- Sección Sobre IQSEC2 -->
+    <section id="sobre-iqsec2" class="section">
+        <div class="container">
+            <h2 class="section-title">Conoce un poco acerca de IQSEC2</h2>
+            <div class="iqsec2-content">
+                <div class="intro-text">
+                    <p>IQSEC2 es un síndrome genético raro que afecta principalmente al desarrollo neurológico. Esta condición está causada por mutaciones en el gen IQSEC2, que juega un papel crucial en el desarrollo del cerebro y la función sináptica. El gen IQSEC2 codifica una proteína que regula la comunicación entre las neuronas, siendo fundamental para el desarrollo cognitivo y motor.</p>
+                    <p>Esta enfermedad fue identificada por primera vez en 2010 y desde entonces se han documentado casos en todo el mundo. Aunque es una condición poco común, su estudio es crucial para entender mejor el desarrollo neurológico y la función sináptica en humanos. La investigación en IQSEC2 no solo ayuda a las familias afectadas, sino que también contribuye al conocimiento general sobre el desarrollo cerebral.</p>
+                    <p>Cada persona con IQSEC2 es única, y la manifestación de los síntomas puede variar significativamente. Esto hace que el diagnóstico y el tratamiento requieran un enfoque personalizado y multidisciplinar, involucrando a neurólogos, genetistas, terapeutas y otros especialistas.</p>
+                    <p>Los síntomas incluyen retraso en el desarrollo, epilepsia, hipotonía y dificultades motoras. Nuestra misión es sensibilizar sobre esta condición, apoyar a las familias y promover la investigación científica para avanzar en su tratamiento.</p>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Desarrollo Neurológico</h3>
+                            <ul>
+                                <li>Discapacidad intelectual de grado variable</li>
+                                <li>Retraso en el desarrollo psicomotor</li>
+                                <li>Trastornos del espectro autista</li>
+                                <li>Epilepsia y convulsiones</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>Comunicación</h3>
+                            <ul>
+                                <li>Trastornos del lenguaje expresivo</li>
+                                <li>Dificultades en la comunicación social</li>
+                                <li>Retraso en la adquisición del habla</li>
+                                <li>Problemas de comprensión</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-walking"></i>
+                            </div>
+                            <h3>Habilidades Motoras</h3>
+                            <ul>
+                                <li>Hipotonía (tono muscular bajo)</li>
+                                <li>Problemas de coordinación</li>
+                                <li>Retraso en la marcha independiente</li>
+                                <li>Alteraciones en la marcha</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-moon"></i>
+                            </div>
+                            <h3>Sueño y Comportamiento</h3>
+                            <ul>
+                                <li>Trastornos del sueño</li>
+                                <li>Ansiedad y comportamientos repetitivos</li>
+                                <li>Dificultades en la regulación emocional</li>
+                                <li>Hiperactividad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resources-section">
+                    <h3>Recursos y Documentación</h3>
+                    <p>Para obtener más información sobre IQSEC2, sus manifestaciones clínicas y los últimos avances en investigación, puedes consultar la siguiente documentación:</p>
+                    <div class="resource-buttons">
+                        <a href="docs/iqsec2-info.pdf" class="resource-button" target="_blank">
+                            Documento Informativo IQSEC2
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrusel de fichas -->
+    <section id="carousel" class="carousel-section">
+        <h2>¡Nuestros Pequeños Superhéroes! 🦸‍♂️</h2>
+        <p class="carousel-description">Conoce a nuestros valientes guerreros que luchan cada día contra IQSEC2. Cada uno tiene su propia historia de superación 💫</p>
+        
+        <div class="carousel-container">
+            <div class="carousel">
+                <!-- MAIA -->
+                <div class="ficha" data-nombre="MAIA">
+                    <div class="ficha-imagen">
+                        <img src="images/fotos/NIÑOS/MAIA/deb19609-95ee-454c-95a2-b722c7526d7d.jpg" alt="MAIA">
+                    </div>
+                    <div class="ficha-contenido">
+                        <h3>MAIA</h3>
+                        <p class="ciudad">Segovia</p>
+                        <div class="mutacion-tag">Sin especificar</div>
+                        <p class="edad">2019</p>
+                    </div>
+                </div>
+
+                <!-- JORDI -->
+                <div class="ficha" data-nombre="JORDI">
+                    <div class="ficha-imagen">
+                        <img src="images/fotos/NIÑOS/JORDI/caff66c8-81d1-4c08-a9a2-f23aa1e932c3.jpg" alt="JORDI">
+                    </div>
+                    <div class="ficha-contenido">
+                        <h3>JORDI</h3>
+                        <p class="ciudad">Tarragona</p>
+                        <div class="mutacion-tag">Sin especificar</div>
+                        <p class="edad">2012</p>
+                    </div>
+                </div>
+
+                <!-- JUDITH -->
+                <div class="ficha" data-nombre="JUDITH">
+                    <div class="ficha-imagen">
+                        <img src="images/fotos/NIÑOS/JUDITH.jpeg" alt="JUDITH">
+                    </div>
+                    <div class="ficha-contenido">
+                        <h3>JUDITH</h3>
+                        <p class="ciudad">Málaga</p>
+                        <div class="mutacion-tag">Exon 12</div>
+                        <p class="edad">2015</p>
+                    </div>
+                </div>
+
+                <!-- NOAH -->
+                <div class="ficha" data-nombre="NOAH">
+                    <div class="ficha-imagen">
+                        <img src="images/fotos/NIÑOS/NOAH.jpg" alt="NOAH">
+                    </div>
+                    <div class="ficha-contenido">
+                        <h3>NOAH</h3>
+                        <p class="ciudad">Gerona</p>
+                        <div class="mutacion-tag">Sin especificar</div>
+                        <p class="edad">2022</p>
+                    </div>
+                </div>
+
+                <!-- ADRIANA -->
+                <div class="ficha" data-nombre="ADRIANA">
+                    <div class="ficha-imagen">
+                        <img src="images/fotos/NIÑOS/ADRIANA 2.jpeg" alt="ADRIANA">
+                    </div>
+                    <div class="ficha-contenido">
+                        <h3>ADRIANA</h3>
+                        <p class="ciudad">Cantabria</p>
+                        <div class="mutacion-tag">Intron 14</div>
+                        <p class="edad">2018</p>
+                    </div>
+                </div>
+
+                <!-- MIQUEL -->
+                <div class="ficha" data-nombre="MIQUEL">
+                    <div class="ficha-imagen">
+                        <img src="images/fotos/NIÑOS/MIQUI FOTO.jpeg" alt="MIQUEL">
+                    </div>
+                    <div class="ficha-contenido">
+                        <h3>MIQUEL</h3>
+                        <p class="ciudad">Valencia</p>
+                        <div class="mutacion-tag">Sin especificar</div>
+                        <p class="edad">2023</p>
+                    </div>
+                </div>
+
+                <!-- JOEL -->
+                <div class="ficha" data-nombre="JOEL">
+                    <div class="ficha-imagen">
+                        <img src="images/fotos/NIÑOS/JOEL FOTO.jpeg" alt="JOEL">
+                    </div>
+                    <div class="ficha-contenido">
+                        <h3>JOEL</h3>
+                        <p class="ciudad">Madrid</p>
+                        <div class="mutacion-tag">Exon 5</div>
+                        <p class="edad">2018</p>
+                    </div>
+                </div>
+
+                <!-- BRAIS -->
+                <div class="ficha" data-nombre="BRAIS">
+                    <div class="ficha-imagen">
+                        <img src="images/LOGOTIPO-AEIQSEC2-VERTICAL.svg" alt="BRAIS">
+                    </div>
+                    <div class="ficha-contenido">
+                        <h3>BRAIS</h3>
+                        <p class="ciudad">Coruña</p>
+                        <div class="mutacion-tag">Exon 13</div>
+                        <p class="edad">2016</p>
+                    </div>
+                </div>
+
+                <!-- DARIO -->
+                <div class="ficha" data-nombre="DARIO">
+                    <div class="ficha-imagen">
+                        <img src="images/LOGOTIPO-AEIQSEC2-VERTICAL.svg" alt="DARIO">
+                    </div>
+                    <div class="ficha-contenido">
+                        <h3>DARIO</h3>
+                        <p class="ciudad">Granada</p>
+                        <div class="mutacion-tag">Sin especificar</div>
+                        <p class="edad">2015</p>
+                    </div>
+                </div>
+
+                <!-- ARES -->
+                <div class="ficha" data-nombre="ARES">
+                    <div class="ficha-imagen">
+                        <img src="images/fotos/NIÑOS/ARES FOTO.jpg" alt="ARES">
+                    </div>
+                    <div class="ficha-contenido">
+                        <h3>ARES</h3>
+                        <p class="ciudad">Madrid</p>
+                        <div class="mutacion-tag">Exon 15</div>
+                        <p class="edad">2010</p>
+                    </div>
+                </div>
+
+                <!-- PABLO -->
+                <div class="ficha" data-nombre="PABLO">
+                    <div class="ficha-imagen">
+                        <img src="images/LOGOTIPO-AEIQSEC2-VERTICAL.svg" alt="PABLO">
+                    </div>
+                    <div class="ficha-contenido">
+                        <h3>PABLO</h3>
+                        <p class="ciudad">Madrid</p>
+                        <div class="mutacion-tag">Sin especificar</div>
+                        <p class="edad">2007</p>
+                    </div>
+                </div>
+
+                <!-- ODEI -->
+                <div class="ficha" data-nombre="ODEI">
+                    <div class="ficha-imagen">
+                        <img src="images/fotos/NIÑOS/ODEI/0608cbae-ddae-4eff-abe2-2ba23f267cda.jpg" alt="ODEI">
+                    </div>
+                    <div class="ficha-contenido">
+                        <h3>ODEI</h3>
+                        <p class="ciudad">Madrid</p>
+                        <div class="mutacion-tag">Sin especificar</div>
+                        <p class="edad">2015</p>
+                    </div>
+                </div>
+
+                <!-- NEREA -->
+                <div class="ficha" data-nombre="NEREA">
+                    <div class="ficha-imagen">
+                        <img src="images/fotos/NIÑOS/NEREA/8d21d713-d1cf-4abc-87c7-7876488b76b1.jpg" alt="NEREA">
+                    </div>
+                    <div class="ficha-contenido">
+                        <h3>NEREA</h3>
+                        <p class="ciudad">Almería</p>
+                        <div class="mutacion-tag">Sin especificar</div>
+                        <p class="edad">2008</p>
+                    </div>
+                </div>
+
+                <!-- MARIA -->
+                <div class="ficha" data-nombre="MARIA">
+                    <div class="ficha-imagen">
+                        <img src="images/fotos/NIÑOS/MARIA/146562b8-b443-4026-aa88-572f3a532643.jpg" alt="MARIA">
+                    </div>
+                    <div class="ficha-contenido">
+                        <h3>MARIA</h3>
+                        <p class="ciudad">Vigo</p>
+                        <div class="mutacion-tag">Sin especificar</div>
+                        <p class="edad">1985</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <section id="mapa" class="mapa-section">
+        <h2>¡Nuestros Superhéroes en España! 🦸‍♂️</h2>
+        <p class="mapa-description">¡Explora el mapa y descubre dónde viven nuestros valientes guerreros! Cada estrella es un héroe que lucha cada día 💫</p>
+        <div class="mapa-container">
+            <div id="map"></div>
+            <div class="mapa-leyenda">
+                <div class="leyenda-item">
+                    <i class="fas fa-heart"></i>
+                    <span>Ciudad con Superhéroes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto y Donaciones -->
+    <section id="contacto" class="contacto-section">
+        <div class="contacto-container">
+            <div class="contacto-info">
+                <h2>Contacto y Donaciones</h2>
+                <p>¿Quieres saber más sobre IQSEC2 o colaborar con nuestra causa? Estamos aquí para ayudarte.</p>
+                
+                <div class="donaciones">
+                    <h3>¿Cómo puedes ayudar?</h3>
+                    <p>Tu apoyo es fundamental para continuar nuestra labor. Puedes hacer una donación a través de:</p>
+                    <div class="donacion-opciones">
+                        <div class="donacion-opcion">
+                            <h4>Transferencia Bancaria</h4>
+                            <p>ESXX XXXX XXXX XXXX XXXX XXXX</p>
+                            <p>Asociación IQSEC2</p>
+                        </div>
+                        <div class="donacion-opcion">
+                            <h4>Bizum</h4>
+                            <p>Número: XXX XXX XXX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="formulario-contacto">
+                <h3>Envíanos un mensaje</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="asunto">Asunto:</label>
+                        <select id="asunto" name="asunto" autocomplete="off" required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="informacion">Solicitar información</option>
+                            <option value="donacion">Información sobre donaciones</option>
+                            <option value="colaboracion">Propuesta de colaboración</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" autocomplete="off" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Asociación IQSEC2. Todos los derechos reservados.</p>
+        <p><a href="#contacto">Política de privacidad</a> | <a href="#contacto">Términos y condiciones</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Destruir cualquier instancia previa del carrusel
+            if ($('.carousel').hasClass('slick-initialized')) {
+                $('.carousel').slick('unslick');
+            }
+            
+            // Inicializar el carrusel con la configuración correcta
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                arrows: true,
+                prevArrow: '<button type="button" class="slick-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>',
+                nextArrow: '<button type="button" class="slick-next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>',
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar el mapa con un estilo más decorativo
+            const map = L.map('map', {
+                center: [40.4168, -3.7038],
+                zoom: 5,
+                zoomControl: true,
+                dragging: true,
+                touchZoom: true,
+                scrollWheelZoom: true,
+                doubleClickZoom: true,
+                boxZoom: true,
+                keyboard: true,
+                attributionControl: true
+            });
+
+            // Usar un estilo de mapa más suave y decorativo
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                opacity: 0.7
+            }).addTo(map);
+
+            // Estilo personalizado para los marcadores con corazón
+            const customIcon = L.divIcon({
+                className: 'custom-marker',
+                html: '<div class="marker-heart"><i class="fas fa-heart"></i><span class="marker-count"></span></div>',
+                iconSize: [40, 40],
+                iconAnchor: [20, 20]
+            });
+
+            // Datos de las ciudades con todos los niños
+            const ciudades = [
+                {
+                    nombre: "Madrid",
+                    coordenadas: [40.4168, -3.7038],
+                    pacientes: [
+                        { nombre: "Pablo", año: "2007" },
+                        { nombre: "Dario", año: "2015" },
+                        { nombre: "Joel", año: "2018", mutacion: "Exon 5" },
+                        { nombre: "Ares", año: "2010", mutacion: "Exon 15" },
+                        { nombre: "Odei", año: "2015" }
+                    ]
+                },
+                {
+                    nombre: "Barcelona",
+                    coordenadas: [41.3851, 2.1734],
+                    pacientes: [
+                        { nombre: "Judith", año: "2015", mutacion: "Exon 12" }
+                    ]
+                },
+                {
+                    nombre: "Valencia",
+                    coordenadas: [39.4699, -0.3763],
+                    pacientes: [
+                        { nombre: "Miquel", año: "2023" }
+                    ]
+                },
+                {
+                    nombre: "A Coruña",
+                    coordenadas: [43.3623, -5.8493],
+                    pacientes: [
+                        { nombre: "Brais", año: "2016", mutacion: "Exon 13" }
+                    ]
+                },
+                {
+                    nombre: "Vigo",
+                    coordenadas: [42.2406, -8.7207],
+                    pacientes: [
+                        { nombre: "Maria", año: "1985" }
+                    ]
+                },
+                {
+                    nombre: "Santander",
+                    coordenadas: [43.3628, -3.8196],
+                    pacientes: [
+                        { nombre: "Adriana", año: "2018", mutacion: "Intron 14" }
+                    ]
+                },
+                {
+                    nombre: "Gerona",
+                    coordenadas: [41.9794, 2.8214],
+                    pacientes: [
+                        { nombre: "Noah", año: "2022" }
+                    ]
+                },
+                {
+                    nombre: "Granada",
+                    coordenadas: [37.1882, -3.6067],
+                    pacientes: [
+                        { nombre: "Dario", año: "2015" }
+                    ]
+                },
+                {
+                    nombre: "Almería",
+                    coordenadas: [36.8408, -2.4637],
+                    pacientes: [
+                        { nombre: "Nerea", año: "2008" }
+                    ]
+                }
+            ];
+
+            // Añadir marcadores con estilo personalizado
+            ciudades.forEach(ciudad => {
+                const marker = L.marker(ciudad.coordenadas, { icon: customIcon }).addTo(map);
+                const countSpan = marker.getElement().querySelector('.marker-count');
+                countSpan.textContent = ciudad.pacientes.length;
+
+                // Crear contenido del popup con todos los pacientes
+                const popupContent = `
+                    <div class="mapa-popup">
+                        <h3>${ciudad.nombre}</h3>
+                        <div class="pacientes-lista">
+                            ${ciudad.pacientes.map(paciente => `
+                                <div class="paciente-item">
+                                    <strong>${paciente.nombre} (${paciente.año})</strong>
+                                    ${paciente.mutacion ? `<br><span class="mutacion">${paciente.mutacion}</span>` : ''}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                marker.bindPopup(popupContent);
+            });
+        });
+
+        // Manejo del formulario de contacto
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Aquí iría el código para manejar el envío del formulario
+        });
+    </script>
+</body>
+
+</html>
+
