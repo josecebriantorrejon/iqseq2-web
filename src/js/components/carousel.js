@@ -14,7 +14,7 @@ export async function initCarousel() {
         const ficha = `
             <div class="ficha" data-nombre="${hero.Nombre}">
                 <div class="ficha-imagen">
-                    <img src="${hero.Imagen}" alt="${hero.Nombre}" style="object-position: ${hero.ObjetoPosicion || 'center'};" onerror="this.onerror=null; this.src='assets/images/logos/LOGOTIPO-AEIQSEC2-COLOR.svg';">
+                    <img src="${hero.Imagen}" alt="${hero.Nombre}" style="object-position: ${hero.ObjetoPosicion || 'center'};" onerror="this.onerror=null; this.src='assets/images/logos/LOGOTIPO-AEIQSEC2-HORIZONTAL.svg';">
                 </div>
                 <div class="ficha-contenido">
                     <h3>${hero.Nombre}</h3>
