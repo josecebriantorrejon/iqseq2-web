@@ -10,6 +10,14 @@ export async function initCarousel() {
     const carouselElement = $('.carousel');
     carouselElement.empty(); // Clear existing static content
 
+    // Referencias a los elementos del overlay
+    const overlay = document.getElementById('superheroDetailOverlay');
+    const detailImage = overlay.querySelector('.detail-image');
+    const detailName = overlay.querySelector('.detail-name');
+    const detailStory = overlay.querySelector('.detail-story');
+    const detailCityMutationAge = overlay.querySelector('.detail-city-mutation-age');
+    const closeBtn = overlay.querySelector('.close-detail');
+
     superheroes.forEach(hero => {
         const ficha = `
             <div class="ficha" data-nombre="${hero.Nombre}">
@@ -25,7 +33,20 @@ export async function initCarousel() {
                 </div>
             </div>
         `;
-        carouselElement.append(ficha);
+        const appendedFicha = $(ficha);
+        carouselElement.append(appendedFicha);
+
+        // Añadir evento clic a cada ficha
+        appendedFicha.on('click', function() {
+            console.log('Carousel card clicked!'); // Debugging line
+            detailImage.src = hero.Imagen;
+            detailImage.alt = hero.Nombre;
+            detailImage.style.objectPosition = hero.ObjetoPosicion || 'center';
+            detailName.textContent = hero.Nombre;
+            detailStory.textContent = hero.Historia;
+            detailCityMutationAge.innerHTML = `Ciudad: ${hero.Ciudad} | Mutación: ${hero.Mutacion} | Edad: ${hero.Edad}`;
+            overlay.style.display = 'flex'; // Mostrar el overlay
+        });
     });
     
     // Inicializar el carrusel con la configuración correcta
@@ -57,4 +78,15 @@ export async function initCarousel() {
             }
         ]
     });
+
+    // Funcionalidad para cerrar el overlay
+    closeBtn.onclick = function() {
+        overlay.style.display = 'none';
+    };
+
+    window.onclick = function(event) {
+        if (event.target === overlay) {
+            overlay.style.display = 'none';
+        }
+    };
 } 
