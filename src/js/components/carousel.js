@@ -38,7 +38,6 @@ export async function initCarousel() {
 
         // Añadir evento clic a cada ficha
         appendedFicha.on('click', function() {
-            console.log('Carousel card clicked!'); // Debugging line
             detailImage.src = hero.Imagen;
             detailImage.alt = hero.Nombre;
             detailImage.style.objectPosition = hero.ObjetoPosicion || 'center';
