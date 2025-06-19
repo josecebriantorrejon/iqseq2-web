@@ -41,19 +41,15 @@ header .logo {
 }
 
 header .logo img {
-    width: 120px; /* Ajusta el tamaño del logo */
-    height: auto; /* Mantén la proporción */
-    max-height: 50px; /* Evita que sobresalga del encabezado */
+    width: 180px; /* Aumenta el tamaño del logo */
+    height: auto;
+    max-height: 75px; /* Permite un logo un poco más grande */
 }
 
 header .logo h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #FFFFFF; /* Contraste */
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    /* This rule is no longer needed as the h1 tag has been removed from index.html */
+    display: none;
 }
-
 
 nav ul {
     list-style: none;
@@ -78,6 +74,7 @@ nav ul li a {
 nav ul li a:hover {
     color: #C3D2EB; /* Secundario IV */
 }
+
 .fichas-carousel .ficha {
     text-align: center;
     padding: 20px;
@@ -137,6 +134,7 @@ nav ul li a:hover {
 .hero .btn:hover {
     background-color: #ECB470; /* Secundario V */
 }
+
 .hero-content {
     text-align: center; /* Centra todos los elementos dentro de Hero */
     display: flex;
@@ -151,6 +149,7 @@ nav ul li a:hover {
     height: auto; /* Mantiene la proporción */
     margin-bottom: 30px; /* Espaciado debajo del logo */
 }
+
 /* Secciones */
 section {
     padding: 40px 20px;
@@ -1371,25 +1370,23 @@ footer a:hover {
 }
 
 .caracteristica-grupo ul {
-    list-style: none;
+    list-style: none !important;
     padding: 0;
     margin: 0;
+    text-align: center;
+    width: 100%;
 }
 
 .caracteristica-grupo li {
-    margin-bottom: 0.8rem;
-    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    padding-left: 0;
     position: relative;
-    font-size: 1rem;
-    color: var(--text-color);
 }
 
 .caracteristica-grupo li::before {
-    content: '•';
-    color: var(--primary-orange);
-    position: absolute;
-    left: 0;
-    font-size: 1.2rem;
+    content: none !important;
 }
 
 .enfermedad-recursos {
@@ -1627,7 +1624,8 @@ footer a:hover {
 }
 
 .intro-text p {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    line-height: 1.8;
 }
 
 .grid-container {
@@ -1638,10 +1636,10 @@ footer a:hover {
 }
 
 .feature-card {
-    background: white;
+    background: var(--white);
     border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -1651,25 +1649,25 @@ footer a:hover {
 }
 
 .feature-icon {
-    width: 80px;
-    height: 80px;
-    background: #f8f9fa;
+    width: 90px;
+    height: 90px;
+    background: var(--light-blue);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .feature-icon i {
-    font-size: 2rem;
-    color: #3498db;
+    font-size: 2.5rem;
+    color: var(--primary-blue);
 }
 
 .feature-card h3 {
-    color: #2c3e50;
+    color: var(--primary-blue);
     margin-bottom: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .feature-card ul {
@@ -1681,79 +1679,89 @@ footer a:hover {
 }
 
 .feature-card ul li {
-    margin-bottom: 0.8rem;
-    color: #555;
-    font-size: 1rem;
-    padding-left: 0;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    padding-left: 30px;
     position: relative;
 }
 
-/* Eliminar el estilo del bullet point */
 .feature-card ul li:before {
-    display: none;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f111";
+    color: var(--primary-orange);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.8rem;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Estilos para la sección de recursos */
 .resources-section {
-    background: #f8f9fa;
+    background: var(--light-blue);
     border-radius: 15px;
-    padding: 30px;
-    margin-top: 40px;
+    padding: 40px;
+    margin-top: 60px;
     text-align: center;
-    border: 1px solid #e9ecef;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .resources-section h3 {
-    color: var(--color-primary);
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+    color: var(--primary-blue);
+    font-size: 1.6rem;
+    margin-bottom: 20px;
 }
 
 .resources-section p {
-    color: var(--color-text);
-    margin-bottom: 25px;
-    max-width: 600px;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.7;
 }
 
 .resource-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
 .resource-button {
-    display: inline-block;
-    background: #FF6B35; /* Color naranja de la asociación */
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-orange);
+    color: var(--white);
+    padding: 1.2rem 2.5rem;
+    border-radius: 10px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-weight: 500;
-    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .resource-button:hover {
-    background: #E85A2A; /* Versión más oscura del naranja para el hover */
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+    background: #e0724d;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(236, 132, 97, 0.3);
 }
 
 .resource-button i {
-    font-size: 1.5rem;
+    margin-right: 10px;
+    font-size: 1.3rem;
 }
 
 .resource-button:hover i {
     transform: scale(1.1);
-    transition: transform 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -2191,4 +2199,19 @@ footer a:hover {
     .superhero-detail-content .detail-story {
         font-size: 1rem;
     }
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #C3D2EB;
 }
