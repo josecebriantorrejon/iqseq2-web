@@ -27,9 +27,7 @@ export async function initCarousel() {
                 <div class="ficha-contenido">
                     <h3>${hero.Nombre}</h3>
                     <p class="ciudad">${hero.Ciudad}</p>
-                    <div class="mutacion-tag">${hero.Mutacion}</div>
                     <p class="edad">${hero.Edad}</p>
-                    <p class="historia">${hero.Historia}</p>
                 </div>
             </div>
         `;
@@ -43,7 +41,7 @@ export async function initCarousel() {
             detailImage.style.objectPosition = hero.ObjetoPosicion || 'center';
             detailName.textContent = hero.Nombre;
             detailStory.textContent = hero.Historia;
-            detailCityMutationAge.innerHTML = `Ciudad: ${hero.Ciudad} | Mutación: ${hero.Mutacion} | Edad: ${hero.Edad}`;
+            detailCityMutationAge.innerHTML = `Ciudad: ${hero.Ciudad} |  Edad: ${hero.Edad}`;
             overlay.style.display = 'flex'; // Mostrar el overlay
         });
     });
