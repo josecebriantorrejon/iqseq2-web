@@ -1,4 +1,5 @@
-const CSV_FILE_PATH = '/assets/data/superheroes.csv';
+const basePath = window.location.pathname.split('/')[1];
+const CSV_FILE_PATH = '/${basePath}/assets/data/superheroes.csv';
 
 export async function loadSuperheroesData() {
     try {
