@@ -1,4 +1,4 @@
-const CSV_FILE_PATH = '../assets/data/superheroes.csv';
+const CSV_FILE_PATH = 'assets/data/superheroes.csv';
 
 export async function loadSuperheroesData() {
     try {
