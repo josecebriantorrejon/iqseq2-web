@@ -2353,3 +2353,123 @@ footer a:hover {
 .social-icons a:hover {
     color: #C3D2EB;
 }
+
+/* Ajustes específicos para móvil */
+@media (max-width: 768px) {
+    .carousel-container {
+        padding: 0 16px;
+    }
+    .ficha-imagen {
+        height: 220px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+    nav ul li a {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .carousel-section {
+        padding: 2rem 1rem;
+    }
+    .ficha-imagen {
+        height: 180px;
+    }
+}
+
+/* Correcciones para móvil: evitar overflow horizontal y mejorar el menú */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+    /* Evitar que las flechas del carrusel provoquen desplazamiento horizontal */
+    .slick-prev { left: 0; }
+    .slick-next { right: 0; }
+
+    /* Links de interés: acolchado más pequeño y una sola columna */
+    .links-section { padding: 20px; }
+    .links-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .carousel-container { padding: 0 12px; }
+}
+
+/* Botón hamburguesa */
+.hamburger {
+    display: none;
+    background: transparent;
+    border: 0;
+    padding: 8px;
+    cursor: pointer;
+}
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Estado activo: convertir hamburguesa en X */
+.hamburger { position: relative; z-index: 1001; }
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    header {
+        gap: 8px;
+    }
+    .hamburger { display: block; }
+    nav#main-nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: linear-gradient(90deg, #4D6BBA 0%, #94D4A1 100%);
+        padding: 10px 16px;
+        display: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    }
+    nav#main-nav.open { display: block; }
+    nav#main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
+/* Reubicación del botón hamburguesa y del menú en móvil */
+@media (max-width: 768px) {
+    header { position: relative; }
+    .hamburger {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        display: block;
+    }
+    nav#main-nav { top: 100%; }
+}
