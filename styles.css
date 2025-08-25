@@ -317,15 +317,14 @@ footer a:hover {
 }
 
 .contacto-container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    display: block;
 }
 
 .contacto-info {
     padding: 2rem;
+    text-align: center;
 }
 
 .contacto-info h2 {
@@ -361,10 +360,32 @@ footer a:hover {
 }
 
 .formulario-contacto {
-    padding: 2rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.contacto-directo {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contact-social {
+    margin-top: 1rem;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.contact-social a {
+    color: #4D6BBA;
+    font-size: 1.4rem;
+    transition: color 0.2s ease;
+}
+.contact-social a:hover {
+    color: #3d5a9d;
+}
+.contact-note {
+    display: block;
+    margin-top: 0.75rem;
+    color: #666;
 }
 
 .form-group {
@@ -2370,6 +2391,7 @@ footer a:hover {
     nav ul li a {
         font-size: 0.95rem;
     }
+    .video-section { margin-top: 80px; }
 }
 
 @media (max-width: 480px) {
@@ -2408,6 +2430,32 @@ nav {
 
 @media (max-width: 480px) {
     .carousel-container { padding: 0 12px; }
+}
+
+/* Video embebido responsivo */
+.video-section {
+    margin-top: 90px;
+}
+.video-section h3 {
+    text-align: center;
+    color: var(--primary-blue);
+    margin-bottom: 16px;
+}
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 /* Botón hamburguesa */
